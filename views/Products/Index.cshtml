@@ -1,0 +1,41 @@
+@model ProductListViewModel
+
+<table>
+  <thead>
+  <tr>
+    <th>Product name</th>
+    <th>Category</th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var product in Model.Products.Data)
+  {
+    <tr>
+      <td>@product.Name</td>
+      <td>@product.Category</td>
+    </tr>}
+  </tbody>
+</table>
+
+<div>
+
+  <div>
+    <cs-pager cs-paging-pagesize="@Model.Products.PageSize"
+              cs-paging-pagenumber="@Model.Products.PageNumber"
+              cs-paging-totalitems="@Model.Products.TotalItems"
+              cs-pagenumber-param="p"
+              cs-show-first-last="true"
+              cs-suppress-empty-nextprev="true"
+              cs-remove-nextprev-links="false"
+              cs-suppress-inactive-firstlast="true"
+              cs-first-page-text="First"
+              cs-last-page-text="Last"
+              cs-pager-li-current-class="active"
+              cs-pager-li-non-active-class="disabled"
+              asp-controller="Products"
+              asp-action="Index">
+    </cs-pager>
+  </div>
+
+
+</div>
