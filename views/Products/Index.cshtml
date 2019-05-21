@@ -8,6 +8,7 @@
   </tr>
   </thead>
   <tbody>
+  
   @foreach (var product in Model.Products.Data)
   {
     <tr>
@@ -17,25 +18,37 @@
   </tbody>
 </table>
 
-<div>
+<nav class="pagination" role="navigation" aria-label="pagination">
 
-  <div>
-    <cs-pager cs-paging-pagesize="@Model.Products.PageSize"
-              cs-paging-pagenumber="@Model.Products.PageNumber"
-              cs-paging-totalitems="@Model.Products.TotalItems"
-              cs-pagenumber-param="p"
-              cs-show-first-last="true"
-              cs-suppress-empty-nextprev="true"
-              cs-remove-nextprev-links="false"
-              cs-suppress-inactive-firstlast="true"
-              cs-first-page-text="First"
-              cs-last-page-text="Last"
-              cs-pager-li-current-class="active"
-              cs-pager-li-non-active-class="disabled"
-              asp-controller="Products"
-              asp-action="Index">
-    </cs-pager>
-  </div>
+  <cs-pager cs-paging-pagesize="@Model.Products.PageSize"
+            cs-paging-pagenumber="@Model.Products.PageNumber"
+            cs-paging-totalitems="@Model.Products.TotalItems"
+            cs-pagenumber-param="p"
+            cs-show-first-last="false"
+            cs-suppress-empty-nextprev="false"
+            cs-remove-nextprev-links="false"
+            cs-suppress-inactive-firstlast="true"
+
+            cs-first-page-text="<"
+            cs-last-page-text=">"
+            
+            cs-pager-li-current-class=""
+            cs-pager-li-other-class=""
+            cs-pager-li-non-active-class=""
+            cs-pager-li-non-active-class=""
+            
+            cs-pager-link-current-class="pagination-link is-current"
+            cs-pager-link-other-class="pagination-link is-current"
+            
+            
+            cs-previous-page-html="<a href='#' class='pagination-link is-current'>Previous</a>"
+            cs-next-page-html="<a href='#' class='pagination-link is-current'>Next page</a>"
+            
+            asp-controller="Products"
+            asp-action="Index">
+  </cs-pager>
+
+</nav>
+  
 
 
-</div>

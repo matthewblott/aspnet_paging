@@ -1,26 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch@0.7.2/slate/bulmaswatch.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
 <body>
 
-<ul class="pagination">
-  <li><a href="/Products?p=1" title="First page">First</a></li>
-  <li><a href="/Products?p=4" title="Previous page">«</a></li>
-  <li><a href="/Products?p=1">1</a></li>
-  <li><a href="/Products?p=2">2</a></li>
-  <li><a href="/Products?p=3">3</a></li>
-  <li><a href="/Products?p=4">4</a></li>
-  <li class="active"><span>5</span></li>
-  <li><a href="/Products?p=6">6</a></li>
-  <li><a href="/Products?p=7">7</a></li>
-  <li><a href="/Products?p=8">8</a></li>
-  <li><a href="/Products?p=9">9</a></li>
-  <li><a href="/Products?p=10">10</a></li>
-  <li class="disabled"><span>...</span></li>
-  <li><a href="/Products?p=52">52</a></li>
-  <li><a href="/Products?p=53">53</a></li>
-  <li><a href="/Products?p=6" title="Next page">»</a></li>
-  <li><a href="/Products?p=53" title="Last page">Last</a></li>
-</ul>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+       data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">
+        Home
+      </a>
+      <a class="navbar-item" href="/Products">
+        Products
+      </a>
+
+    </div>
+
+
+  </div>
+</nav>
+<div class="container is-fluid">
+
+  <table>
+    <thead>
+    <tr>
+      <th>Product name</th>
+      <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+      <td>Product 1</td>
+      <td>Shoes</td>
+    </tr>
+    <tr>
+      <td>Product 2</td>
+      <td>Electronics</td>
+    </tr>
+    <tr>
+      <td>Product 3</td>
+      <td>Food</td>
+    </tr>
+    <tr>
+      <td>Product 4</td>
+      <td>Shoes</td>
+    </tr>
+    <tr>
+      <td>Product 5</td>
+      <td>Shoes</td>
+    </tr>
+    <tr>
+      <td>Product 6</td>
+      <td>Electronics</td>
+    </tr>
+    <tr>
+      <td>Product 7</td>
+      <td>Food</td>
+    </tr>
+    <tr>
+      <td>Product 8</td>
+      <td>Shoes</td>
+    </tr>
+    <tr>
+      <td>Product 9</td>
+      <td>Shoes</td>
+    </tr>
+    <tr>
+      <td>Product 10</td>
+      <td>Electronics</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <nav class="pagination" role="navigation" aria-label="pagination">
+
+    <ul class="pagination">
+      <li class=""><a href='/Products?p=1' class='pagination-previous'>Previous</a></li>
+      <li><span class="pagination-link">1</span></li>
+      <li><a class="pagination-link" href="/Products?p=2">2</a></li>
+      <li><a class="pagination-link" href="/Products?p=3">3</a></li>
+      <li><a class="pagination-link" href="/Products?p=4">4</a></li>
+      <li><a class="pagination-link" href="/Products?p=5">5</a></li>
+      <li><a class="pagination-link" href="/Products?p=6">6</a></li>
+      <li><a class="pagination-link" href="/Products?p=7">7</a></li>
+      <li><a class="pagination-link" href="/Products?p=8">8</a></li>
+      <li><a class="pagination-link" href="/Products?p=9">9</a></li>
+      <li><a class="pagination-link" href="/Products?p=10">10</a></li>
+      <li class=""><span class="pagination-link">...</span></li>
+      <li><a class="pagination-link" href="/Products?p=52">52</a></li>
+      <li><a class="pagination-link" href="/Products?p=53">53</a></li>
+      <li><a href='/Products?p=2' class='pagination-next'>Next page</a></li>
+    </ul>
+
+  </nav>
+
+
+</div>
+
+<script src="/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY"></script>
+
 
 </body>
 </html>

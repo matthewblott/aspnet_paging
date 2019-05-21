@@ -1,5 +1,6 @@
 ﻿using aspnet_paging.services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,7 +17,11 @@ namespace aspnet_paging
 
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddMvc();
+      services
+        .AddMvc()
+        .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+        .AddRazorRuntimeCompilation();
+      
       services.AddCloudscribePagination();
       services.AddScoped<IProductService, ProductService>();
     }
@@ -32,7 +37,6 @@ namespace aspnet_paging
       {
         endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });      
-      
       
     }
     
