@@ -26,6 +26,20 @@ namespace aspnet_paging.controllers
             
     }
 
+    public IActionResult SortedAlphabetically(int p, string q = "")
+    {
+      var pagedResult = _productService.FindByLetter(p, q);
+      
+      var model = new ProductListViewModel
+      {
+        Products = pagedResult,
+        Query = q
+      };
+      
+      return View(model);
+      
+    }
+    
   }
   
 }

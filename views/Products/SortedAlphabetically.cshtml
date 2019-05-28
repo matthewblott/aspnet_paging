@@ -1,5 +1,12 @@
 @model ProductListViewModel
 
+<cs-alphapager cs-alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+               cs-selected-letter="@Model.Query"
+               cs-all-label="All"
+               asp-controller="Products"
+               asp-action="SortedAlphabetically" 
+               cs-selected-letter-param="q"></cs-alphapager>
+
 <table>
   <thead>
   <tr>
@@ -20,7 +27,7 @@
   </tbody>
 </table>
 
-<nav class="pagination" role="navigation">
+<nav class="pagination" role="navigation" aria-label="pagination">
 
   <cs-pager cs-paging-pagesize="@Model.Products.PageSize"
             cs-paging-pagenumber="@Model.Products.PageNumber"
@@ -30,27 +37,19 @@
             cs-suppress-empty-nextprev="false"
             cs-remove-nextprev-links="false"
             cs-suppress-inactive-firstlast="true"
-
             cs-first-page-text="<"
             cs-last-page-text=">"
-            
             cs-pager-li-current-class=""
             cs-pager-li-other-class=""
             cs-pager-li-non-active-class=""
             cs-pager-li-non-active-class=""
-            
             cs-pager-link-current-class="pagination-link is-current"
             cs-pager-link-other-class="pagination-link is-current"
-            
-            
             cs-previous-page-html="<a href='#' class='pagination-link is-current'>Previous</a>"
             cs-next-page-html="<a href='#' class='pagination-link is-current'>Next page</a>"
-            
+            asp-route-q="@Model.Query"
             asp-controller="Products"
-            asp-action="Index">
+            asp-action="SortedAlphabetically">
   </cs-pager>
 
 </nav>
-  
-
-

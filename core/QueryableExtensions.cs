@@ -25,7 +25,7 @@ namespace aspnet_paging.core
       return pagedResult;
       
     }
- 
+    
   }
   
 }
